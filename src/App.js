@@ -4,7 +4,7 @@ import './styles/style.css'
 
 const Main = lazy( () => import('./components/Main') )
 const Menu = lazy( () => import('./components/Menu') )
-const Form = lazy( () => import('./components/Form') )
+const Quiz = lazy( () => import('./components/Quiz/Quiz') )
 const Env = lazy( () => import('./components/Env') )
 const Safety = lazy( () => import('./components/Safety') )
 const Forum = lazy( () => import('./components/Forum') )
@@ -18,7 +18,7 @@ function App() {
       <div id='reszta' >
         <Switch location={ location || background } >
           <Route exact path='/' children={ <Main/> } />
-          <Route path='/formularz' children={ <Form/> } />
+          <Route path='/formularz' children={ <Quiz/> } />
           <Route path='/srodowisko' children={ <Env/> } />
           <Route path='/bezpieczenstwo' children={ <Safety/> } />
           <Route path='/forum' children={ <Forum/> } />
