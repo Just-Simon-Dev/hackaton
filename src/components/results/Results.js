@@ -35,10 +35,6 @@ export default function Results({answers}) {
                 apiCars.map((element, index)=>{
                     
                         return <Card key={index} className='result-card'>
-                                    <CardMedia
-                                        className='result-image'
-                                        image="../../../img/slider1.jpg"
-                                    />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2">
                                         {element.attributes.marka} {element.attributes.model}
