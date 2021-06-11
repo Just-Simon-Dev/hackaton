@@ -22,11 +22,14 @@ export default function Results({answers}) {
 
     useEffect(() => {
         for (let i = Number.parseInt(days[0]); i <= Number.parseInt(days[1]); i++)
-            axios.get(`https://api.cepik.gov.pl/pojazdy?wojewodztwo=02&data-od=${year + month + day}&limit=2&filter[rodzaj-pojazdu]=${answers[0]}&filter[marka]=${answers[1]}&filter[rok-produkcji]=${i}&filter[rodzaj-paliwa]=${answers[3]}&filter[liczba-miejsc-ogolem]=${answers[4]}`)
+            axios.get(`https://api.cepik.gov.pl/pojazdy?wojewodztwo=02&data-od=${year + month + day}&limit=5&filter[rodzaj-pojazdu]=${answers[0]}&filter[marka]=${answers[1]}&filter[rok-produkcji]=${i}&filter[rodzaj-paliwa]=${answers[3]}&filter[liczba-miejsc-ogolem]=${answers[4]}`)
                 .then(res => {
                     setApiCars(apiCars.concat(res.data.data));
                 })
                 .catch((err) => console.log(err))
+        return () => {
+            setApiCars([])
+        }
     }, [])
 
     return (
