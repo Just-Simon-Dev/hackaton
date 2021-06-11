@@ -8,10 +8,12 @@ import Question from './Question'
 export default function Quiz() {
     const [pytanie, setPytanie] = useState( 0 )
     const [answers, setAnswers] = useState([])
+    const [ready, setReady] = useState( false )
 
     useEffect(() => {
         return  () => {
             setPytanie(0)
+            setReady(false)
         }
     }, [])
 
@@ -19,13 +21,16 @@ export default function Quiz() {
         if( pytanie < questions.length -1  ){
         setPytanie( e => e +1 )
         setAnswers( e => [...e, ans] )
+        
+        }else{
+            setReady( true )
         }
         
     }
 
     return (
-        <div>
-            { pytanie < questions.length -1 ?
+        <div id='quiz' >
+            { !ready ?
             <div>
                 <h1> { questions[pytanie].title } </h1>
                 { questions[pytanie].answers.map( (que, i) => 

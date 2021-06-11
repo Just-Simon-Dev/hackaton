@@ -66,6 +66,11 @@ ul, li {
   background: #232a3f;
 }
 
+#quiz {
+  width: 30vw;
+  background: pink;
+}
+
 @-webkit-keyframes karty-wysuwanie {
   0% {
     opacity: 0;
