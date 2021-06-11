@@ -1,5 +1,6 @@
 import { Button } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
+import Results from '../results/Results'
 import serce from './../../img/heart.svg'
 import {questions} from './../other/questions'
 import Question from './Question'
@@ -24,10 +25,16 @@ export default function Quiz() {
 
     return (
         <div>
-            <h1> { questions[pytanie].title } </h1>
-            { questions[pytanie].answers.map( (que, i) => 
-                <Button key={i} onClick={ e => answerSelected( que ) } > {que} </Button>
-            ) }
+            { pytanie < questions.length -1 ?
+            <div>
+                <h1> { questions[pytanie].title } </h1>
+                { questions[pytanie].answers.map( (que, i) => 
+                    <Button key={i} onClick={ e => answerSelected( que ) } > {que} </Button>
+                ) }
+            </div>
+            :
+            <Results answers={ answers } />
+        }
         </div>
     )
 }
