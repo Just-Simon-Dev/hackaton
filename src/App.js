@@ -10,6 +10,8 @@ const Safety = lazy( () => import('./components/Safety') )
 const Forum = lazy( () => import('./components/Forum') )
 const ResultCard = lazy(() => import('./components/results/ResultCard'))
 const MainForum = lazy(() => import('./components/forum/Main'))
+const Login = lazy(() => import('./components/forum/Login'))
+const Registration = lazy(() => import('./components/forum/Registration'))
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
           <Route path='/forum' children={ <Forum/> } />
           <Route path='/carCard' children={<ResultCard />} />
           <Route path='/forum/glowna' children={<MainForum />} />
+          <Route path='/logowanie' children={<Login />} />
+          <Route path='/rejestracja' children={<Registration />} />
         </Switch>
       </div>
     </Suspense>
