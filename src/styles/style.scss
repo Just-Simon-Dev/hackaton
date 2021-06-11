@@ -1,11 +1,11 @@
-$gray : rgb(24, 24, 24);
+$gray : #1a223a;;
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: gray;
+    background: #596275;
     color: white;
     font-family: 'Quicksand', sans-serif;
 }
@@ -27,14 +27,25 @@ ul, li{
     justify-content: space-around;
     height: calc(100% - 5rem);
     .karty{
+        padding: 9px;
         width: 30%;
         margin-bottom: 2rem;
         min-width: 16rem;
         position: relative;
-        height: 17rem;
+        min-height: 17rem;
+        height: 40vh;
+        max-height: 18.5rem;
+        background: #303952;
+        color: rgb(163, 163, 163);
+        h2{
+            color: white;
+        }
         button{
             position: absolute;
-            bottom: 0;
+            bottom: 10px;
+            color: white;
+            padding: 10px;
+            background: #232a3f;
         }
     }
 }

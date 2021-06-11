@@ -4,7 +4,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: gray;
+  background: #596275;
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
@@ -36,16 +36,28 @@ ul, li {
 }
 
 .safety-container .karty {
+  padding: 9px;
   width: 30%;
   margin-bottom: 2rem;
   min-width: 16rem;
   position: relative;
-  height: 17rem;
+  min-height: 17rem;
+  height: 40vh;
+  max-height: 18.5rem;
+  background: #303952;
+  color: #a3a3a3;
+}
+
+.safety-container .karty h2 {
+  color: white;
 }
 
 .safety-container .karty button {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  color: white;
+  padding: 10px;
+  background: #232a3f;
 }
 
 .menu {
@@ -54,7 +66,7 @@ ul, li {
   display: -ms-flexbox;
   display: flex;
   height: 4.8rem;
-  background: #181818;
+  background: #1a223a;
   position: fixed;
   z-index: 20;
   top: 0;
@@ -82,7 +94,7 @@ ul, li {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background: #181818;
+  background: #1a223a;
   z-index: -1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
