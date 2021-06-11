@@ -8,6 +8,7 @@ body{
     background: #596275;
     color: white;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 a{
     color: white;
@@ -79,6 +80,49 @@ ul, li{
     padding: 1.5rem;
     background: #505970;
 }
+
+#mainer{
+    position: absolute;
+    top: 5rem;
+    
+    #slider{
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: calc(100vh +5rem);
+        
+        img{
+            min-width: 100vw;
+            height: 100vh  ;
+            position: absolute;
+            top: -5rem;
+            filter: brightness(50%);
+        }
+        .slide{
+            .text-rog{
+                position: absolute;
+                right: 2rem;
+                text-align: right;
+                top: calc(100vh - 19rem);
+                h1{
+                    font-size: 2.5rem;
+                }
+                button{
+                    background: #303952;
+                    width: 9rem;
+                    height: 3rem;
+                    transition: 0.5s;
+                    color: white;
+                    &:hover{
+                        background: #101625;
+                    }
+                }
+            }
+           }
+    }
+}
+
+
 @keyframes karty-wysuwanie {
     0%{
         opacity: 0;
