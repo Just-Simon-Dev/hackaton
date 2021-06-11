@@ -16,6 +16,26 @@ a{
 ul, li{
     list-style: none;
 }
-
+#id{
+    margin-top: 5rem
+}
+.safety-container{
+    display: flex;
+    margin-top: 20vh;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: calc(100% - 5rem);
+    .karty{
+        width: 30%;
+        margin-bottom: 2rem;
+        min-width: 16rem;
+        position: relative;
+        height: 17rem;
+        button{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
 @import './menu.scss';
-@import './animations.scss';
