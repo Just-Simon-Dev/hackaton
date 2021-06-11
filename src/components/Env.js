@@ -19,7 +19,7 @@ export default function Env() {
         <div className="safety-container">
             {
                 context.map((element, i) => {
-                    return <Card className='1' key={i}>
+                    return <Card className='karty' key={i}>
                         <CardContent>
                             <Typography variant="h5" component="h2">
                                 {element.name}
