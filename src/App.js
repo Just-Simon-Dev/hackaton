@@ -8,10 +8,13 @@ const Quiz = lazy( () => import('./components/Quiz/Quiz') )
 const Env = lazy( () => import('./components/Env') )
 const Safety = lazy( () => import('./components/Safety') )
 const Forum = lazy( () => import('./components/Forum') )
+const ResultCard = lazy(() => import('./components/results/ResultCard'))
 
 function App() {
+
   const location = useLocation()
   const background = location.state && location.state.background;
+
   return (
     <Suspense fallback='ładowanie..' >
       <div id='menu' > <Menu/> </div>
@@ -22,6 +25,7 @@ function App() {
           <Route path='/srodowisko' children={ <Env/> } />
           <Route path='/bezpieczenstwo' children={ <Safety/> } />
           <Route path='/forum' children={ <Forum/> } />
+          <Route path='/carCard' children={<ResultCard />} />
         </Switch>
       </div>
     </Suspense>
