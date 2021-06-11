@@ -52,6 +52,8 @@ ul, li {
   color: #a3a3a3;
   -webkit-animation: karty-wysuwanie 0.5s ease-in-out;
           animation: karty-wysuwanie 0.5s ease-in-out;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .safety-container .karty h2 {
@@ -66,13 +68,35 @@ ul, li {
   background: #232a3f;
 }
 
+.safety-container .karty:hover {
+  background: #232a3f;
+}
+
 #quiz {
   width: 70vw;
-  margin-left: 15vw;
+  margin-left: calc(15vw - 1.5rem);
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 7rem;
+  padding: 1.5rem;
+  background: #505970;
+}
+
+#quiz button {
+  padding: 2rem;
+  background: #232a3f;
+  color: white;
+  margin: 1rem;
+  width: 45%;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#quiz button:hover {
+  opacity: 1;
 }
 
 @-webkit-keyframes karty-wysuwanie {
