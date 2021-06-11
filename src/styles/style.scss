@@ -54,8 +54,14 @@ ul, li{
     }
 }
 #quiz{
-    width: 30vw;
-    background: pink;
+    width: 70vw;
+    margin-left: 15vw;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    button{
+        
+    }
 }
 @keyframes karty-wysuwanie {
     0%{

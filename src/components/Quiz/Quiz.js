@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Results from '../results/Results'
 import serce from './../../img/heart.svg'
 import {questions} from './../other/questions'
-import Question from './Question'
 
 export default function Quiz() {
     const [pytanie, setPytanie] = useState( 0 )
@@ -23,6 +22,7 @@ export default function Quiz() {
         setAnswers( e => [...e, ans] )
         
         }else{
+            setAnswers( e => [...e, ans] )
             setReady( true )
         }
         
@@ -40,6 +40,7 @@ export default function Quiz() {
             :
             <Results answers={ answers } />
         }
+        {console.log( answers )}
         </div>
     )
 }
