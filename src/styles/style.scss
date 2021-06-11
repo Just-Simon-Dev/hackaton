@@ -1,0 +1,21 @@
+$gray : rgb(24, 24, 24);
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: gray;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul, li{
+    list-style: none;
+}
+
+@import './menu.scss';
+@import './animations.scss';

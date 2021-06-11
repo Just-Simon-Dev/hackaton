@@ -1,7 +1,9 @@
 import { Switch, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import './styles/style.css'
 
 const Main = lazy( () => import('./components/Main') )
+const Menu = lazy( () => import('./components/Menu') )
 const Form = lazy( () => import('./components/Form') )
 const Env = lazy( () => import('./components/Env') )
 const Costs = lazy( () => import('./components/Costs') )
@@ -13,15 +15,15 @@ function App() {
   const background = location.state && location.state.background;
   return (
     <Suspense fallback='ładowanie..' >
-      <div id='menu' > menu </div>
+      <div id='menu' > <Menu/> </div>
       <div id='reszta' >
         <Switch location={ location || background } >
-          <Route exact path='/' component={ <Main/> } />
-          <Route path='/formularz' component={ <Form/> } />
-          <Route path='/srodowisko' component={ <Env/> } />
-          <Route path='/koszty' component={ <Costs/> } />
-          <Route path='/bezpieczenstwo' component={ <Safety/> } />
-          <Route path='/forum' component={ <Forum/> } />
+          <Route exact path='/' children={ <Main/> } />
+          <Route path='/formularz' children={ <Form/> } />
+          <Route path='/srodowisko' children={ <Env/> } />
+          <Route path='/koszty' children={ <Costs/> } />
+          <Route path='/bezpieczenstwo' children={ <Safety/> } />
+          <Route path='/forum' children={ <Forum/> } />
         </Switch>
       </div>
     </Suspense>

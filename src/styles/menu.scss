@@ -1,0 +1,153 @@
+.menu{
+    width: 100vw;
+    display: flex;
+    height: 4.8rem;
+    background: $gray;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+   .top-logo{
+       display: flex;
+    img{
+        width: 5rem;
+        margin-left: 1rem;
+    }
+    #bolt{
+        height: 2.8rem;
+        width: auto;
+        margin-top: 1.3rem;
+        margin-left: 0;
+    }
+   }
+   .smol-menu{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: $gray;
+    z-index: -1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    .sect{
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        ul{
+            margin-left: 2rem;
+        }
+    }
+}
+   .center {
+        position: absolute;
+        width: 2.5rem;
+        right: 2.5rem;
+        height: 2rem;
+        top: 1rem;
+        .ham-aktywny {
+            .bar {
+                display: block;
+                width: 2.5rem;
+                height: 4px;
+                margin: 6px auto;
+                -webkit-transition: all 0.5s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background: white;
+            }
+        }
+        .ham-nieaktywny {
+            .bar {
+                display: block;
+                width: 2.5rem;
+                height: 4px;
+                margin: 6px auto;
+                -webkit-transition: all 0.5s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background: white;
+                &:nth-child(1){
+                    transform: translateY(10px) rotate(45deg);
+                }
+                &:nth-child(3){
+                    transform: translateY(-10px) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+            }
+            
+        }
+  }
+   .right{
+       display: flex;
+       position: absolute;
+       right: 1rem;
+       justify-content: space-between;
+    li{
+        z-index: 12;
+        position: relative;
+        float: left;
+        padding: 1rem;
+        transition: all 2s ease;
+        line-height: 2.5rem;
+        ul{
+            visibility: hidden;
+            z-index: 12;
+            opacity: 0;
+            min-width: 13rem;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.623);
+             left: -3rem;
+            display: none;
+            padding: 1rem;
+            
+            &:hover{
+                li{
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                    list-style-type: circle;
+                }
+            }
+            li{
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                z-index: 12;
+                list-style-type: circle;
+
+            }
+        }
+        &:hover{
+            animation: poka 0.5s;
+            ul{
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                
+            }
+        }
+    }
+   }
+}
+@keyframes wejscie {
+    0%{
+     margin-left: 100vw;
+    }
+    100%{
+     margin-left: 0;
+    }
+ }
+ @keyframes wyjscie {
+    0%{
+     margin-left: 0;
+    }
+    100%{
+     margin-left: 100vw;
+    }
+ }
+ @keyframes poka {
+    0%{ opacity: 0; z-index: 12;}
+    100%{ opacity: 1; }
+}
