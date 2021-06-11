@@ -16,12 +16,12 @@ function App() {
       <div id='menu' > menu </div>
       <div id='reszta' >
         <Switch location={ location || background } >
-          <Route exact path='/' component={ <Main/> } />
-          <Route path='/formularz' component={ <Form/> } />
-          <Route path='/srodowisko' component={ <Env/> } />
-          <Route path='/koszty' component={ <Costs/> } />
-          <Route path='/bezpieczenstwo' component={ <Safety/> } />
-          <Route path='/forum' component={ <Forum/> } />
+          <Route exact path='/' children={ <Main/> } />
+          <Route path='/formularz' children={ <Form/> } />
+          <Route path='/srodowisko' children={ <Env/> } />
+          <Route path='/koszty' children={ <Costs/> } />
+          <Route path='/bezpieczenstwo' children={ <Safety/> } />
+          <Route path='/forum' children={ <Forum/> } />
         </Switch>
       </div>
     </Suspense>
