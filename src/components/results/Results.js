@@ -32,25 +32,24 @@ export default function Results({answers}) {
     return (
         <div className="result-container">
             {
-                apiCars.map((element, index)=>{
-                    
-                        return <Card key={index} className='result-card'>
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                        {element.attributes.marka} {element.attributes.model}
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            rok produkcji: {element.attributes['rok-produkcji']}
-                                        </Typography>
-                                    </CardContent>
-                            
-                                <CardActions>
-                                    <Link to={"/carCard/"+element.id}><Button size="small">Zobacz więcej</Button></Link>
-                                </CardActions>
-                            </Card>
+                apiCars.map((element, index) => {
+                    return <Card key={index} className='result-card'>
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="h2">
+                                {element.attributes.marka} {element.attributes.model}
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                rok produkcji: {element.attributes['rok-produkcji']}
+                            </Typography>
+                        </CardContent>
+
+                        <CardActions>
+                            <Link to={"/carCard/" + element.id}><Button size="small">Zobacz więcej</Button></Link>
+                        </CardActions>
+                    </Card>
                 })
             }
-            
+            {apiCars.length == 0 ? "Przepraszamy, nie mogliśmy znaleźć wyników, dla podanych parametrów" : null}
         </div>
     )
 }
