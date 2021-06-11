@@ -15,16 +15,22 @@ export default function Forum() {
     const [isLogged, setIsLogged] = useState(false);
 
     useEffect(() => {
-        setIsLogged(document.cookie.split(';')[4].split("=")[1])
+        for (let i = 0; i < document.cookie.split(';').length; i++){
+            if (document.cookie.split(';')[i].split('=')[0] == 'username'){
+                setIsLogged(true)
+                break
+            }
+        }
         console.log(isLogged)
         axios.get(database+"/access")
             .then(res => {
                 //stuff
             })
-    })
+    }, [])
     return (
         <div>
             {/* {isLogged ? null : <Redirect to="/logowanie"/>} */}
+
         </div>
     )
 }

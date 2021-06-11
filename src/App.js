@@ -12,6 +12,7 @@ const ResultCard = lazy(() => import('./components/results/ResultCard'))
 const MainForum = lazy(() => import('./components/forum/Main'))
 const Login = lazy(() => import('./components/forum/Login'))
 const Registration = lazy(() => import('./components/forum/Registration'))
+const Aktywacja = lazy(() => import('./components/forum/Aktywacja'))
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='/forum/glowna' children={<MainForum />} />
           <Route path='/logowanie' children={<Login />} />
           <Route path='/rejestracja' children={<Registration />} />
+          <Route path='/aktywacja' children={<Aktywacja />} />
         </Switch>
       </div>
     </Suspense>
