@@ -69,7 +69,6 @@ export default function Menu() {
                                 <li><Link to='/forum/profil' > Mój profil </Link></li>
                             </ul>
                     </li>
-                    <li><Link to='/koszty' > Koszty </Link></li>
                     <li><Link to='/bezpieczenstwo' > Bezpieczeństwo </Link></li>
                     <li><Link to='/srodowisko' > Środowisko </Link></li>
                 </div>
@@ -90,7 +89,6 @@ export default function Menu() {
                                 <li><Link to='/forum/glowna' > Strona Główna </Link></li>
                                 <li><Link to='/forum/profil' > Mój profil </Link></li>
                             </ul>
-                            <li><Link to='/koszty' > Koszty </Link></li>
                             <li><Link to='/bezpieczenstwo' > Bezpieczeństwo </Link></li>
                             <li><Link to='/srodowisko' > Środowisko </Link></li>
                         </div>

@@ -6,7 +6,6 @@ const Main = lazy( () => import('./components/Main') )
 const Menu = lazy( () => import('./components/Menu') )
 const Form = lazy( () => import('./components/Form') )
 const Env = lazy( () => import('./components/Env') )
-const Costs = lazy( () => import('./components/Costs') )
 const Safety = lazy( () => import('./components/Safety') )
 const Forum = lazy( () => import('./components/Forum') )
 
@@ -21,7 +20,6 @@ function App() {
           <Route exact path='/' children={ <Main/> } />
           <Route path='/formularz' children={ <Form/> } />
           <Route path='/srodowisko' children={ <Env/> } />
-          <Route path='/koszty' children={ <Costs/> } />
           <Route path='/bezpieczenstwo' children={ <Safety/> } />
           <Route path='/forum' children={ <Forum/> } />
         </Switch>

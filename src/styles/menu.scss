@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 20;
     top: 0;
+    animation: wysuwanie 0.3s ease-in;
    .top-logo{
        display: flex;
     img{
@@ -97,7 +98,7 @@
             opacity: 0;
             min-width: 13rem;
             position: absolute;
-            background: rgba(0, 0, 0, 0.623);
+            background: rgba(13, 11, 48, 0.623);
              left: -3rem;
             display: none;
             padding: 1rem;
@@ -150,4 +151,8 @@
  @keyframes poka {
     0%{ opacity: 0; z-index: 12;}
     100%{ opacity: 1; }
+}
+@keyframes wysuwanie {
+    0%{ top: -5rem;}
+    100%{ top: 0; }
 }
