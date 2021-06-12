@@ -181,6 +181,94 @@ ul, li {
   line-height: 300%;
 }
 
+#forum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#forum #control {
+  height: calc(100vh - 5rem);
+  position: fixed;
+  width: 17rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+}
+
+#forum #control div {
+  width: 15rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#forum #control div button {
+  margin-top: 1rem;
+  background: #505970;
+  width: 15rem;
+}
+
+#forum #control div button:hover {
+  background: #3d455a;
+}
+
+#forum #control div #pass {
+  position: absolute;
+  bottom: 3rem;
+  background: #303952;
+  color: white;
+  width: 14rem;
+  height: 3rem;
+  left: 1.5rem;
+}
+
+#forum #control div #pass:hover {
+  background: #202736;
+}
+
+#forum #posts {
+  margin-left: 17rem;
+  width: calc(100vw - 17rem);
+  padding: 2rem;
+}
+
+#forum #posts section .karty {
+  width: 50vw;
+  min-width: 25rem;
+  background: #434b61;
+  margin-bottom: 2rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#forum #posts section .karty p {
+  font-size: 1.5rem;
+}
+
+#forum #posts section .karty .comments {
+  width: 50w;
+  top: 5.5rem;
+  height: auto;
+  padding-left: 1rem;
+}
+
+#forum #posts section .karty .comments p {
+  width: 50vw;
+  font-size: 1rem;
+}
+
+#forum #posts section .karty section {
+  background: #505970;
+  width: 50vw;
+  top: 10rem;
+  margin-top: 1rem;
+}
+
+#forum #posts section .karty section input {
+  width: 35vw;
+}
+
 @-webkit-keyframes karty-wysuwanie {
   0% {
     opacity: 0;

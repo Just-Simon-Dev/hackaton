@@ -150,7 +150,81 @@ ul, li{
     }
 }
 #forum{
-    
+    display: flex;
+    #control{
+    height: calc(100vh - 5rem);
+    position: fixed;
+    width: 17rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    div{
+        width: 15rem;
+        transition: 0.5s;
+        button{
+            margin-top: 1rem;
+            background: #505970;
+            width: 15rem;
+            &:hover{
+                background: #3d455a;
+            }
+        }
+        #pass{
+            position: absolute;
+            bottom: 3rem;
+            background: #303952;
+            color: white;
+            width: 14rem;
+            height: 3rem;
+            left: 1.5rem;
+            &:hover{
+                background: rgb(32, 39, 54);
+            }
+        }
+    }
+    }
+    #posts{
+        margin-left: 17rem;
+        width: calc(100vw - 17rem);
+        padding: 2rem;
+        section{
+            .karty{
+                width: 50vw;
+                min-width: 25rem;
+                background: #434b61;
+                margin-bottom: 2rem;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                // display: flex;
+                // flex-wrap: wrap;
+                p{
+                    font-size: 1.5rem;
+                }
+                .comments{
+                    width: 50w;
+                    // background: #101625;
+                    // position: absolute;
+                    top: 5.5rem;
+                    height: auto;
+                    padding-left: 1rem;
+                    p{
+                        width: 50vw;
+                        font-size: 1rem;
+                    }
+                    
+                }
+                section{
+                    // position: absolute;
+                    background: #505970;
+                    width: 50vw;
+                    top: 10rem;
+                    margin-top: 1rem;
+                    input{
+                        width: 35vw;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes karty-wysuwanie {

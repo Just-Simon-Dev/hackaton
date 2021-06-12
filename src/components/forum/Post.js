@@ -28,7 +28,7 @@ export default function Post({element, index}) {
             <CardActionArea>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                            {element.id_autora}
+                            Autor: {element.id_autora}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {element.text}
@@ -36,14 +36,20 @@ export default function Post({element, index}) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
+                    <div className='comments' >
                     {element.komentarze.map( (el, index)=> {
                         return el.text_kom != '' ? <Typography variant="body2" color="textSecondary" component="p">
                             {el.text_kom}
                         </Typography> : null
                     })}
+                    </div><br></br>
+            
+            
+            </CardActions>
+            <section>
                     <TextField id="filled-basic" label="odpowiedz" variant="filled" onChange={event => setNewComm(event.target.value)} value={newComm} />
                 <Button onClick={sendComm}>Wyślij</Button>
-            </CardActions>
+                </section>
       </Card>
     )
 }

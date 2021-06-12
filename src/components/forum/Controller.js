@@ -29,10 +29,12 @@ export default function Controller() {
 
     return (
         <div id='control' >
-            nazwa użytkownika: {name}<br/>
+            <h2>Witaj, {name}</h2>
+            <div>
             <TextField id="outlined-basic" label="postuj" variant="standard" onChange={event => setPost(event.target.value)} value={post} /><br />
             <Button onClick={toDB}>wyślij</Button>
-            <Link to="/zmiana"><Button>zmień hasło</Button></Link>
+            <Link to="/zmiana"><Button id='pass' >zmień hasło</Button></Link>
+            </div>
         </div>
     )
 }

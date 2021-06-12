@@ -17,7 +17,7 @@ export default function Forum() {
             })
     }, [])
     return (
-        <div>
+        <div id='forum' >
             {document.cookie.search("username") !== -1 ? null : <Redirect to="/logowanie"/>}
             <Controller/>
             <Main/>

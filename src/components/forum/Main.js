@@ -17,10 +17,12 @@ export default function Main() {
     }, [])
 
     return (
-        <div>
+        <div id='posts' >
+            <section>
             {posts.map((element, index) => {
                 return <Post key={index} element={element} index={index} />
             })}
+            </section>
         </div>
     )
 }
