@@ -244,13 +244,14 @@ ul, li {
 
 #forum #posts section .karty p {
   font-size: 1.5rem;
+  padding-left: 1rem;
 }
 
 #forum #posts section .karty .comments {
   width: 50w;
   top: 5.5rem;
   height: auto;
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 #forum #posts section .karty .comments p {
@@ -266,7 +267,20 @@ ul, li {
 }
 
 #forum #posts section .karty section input {
-  width: 35vw;
+  width: 50vw;
+  height: 1rem;
+}
+
+#forum #posts section .karty section button {
+  background: #303952;
+  width: 100%;
+  height: 3rem;
+  color: #596275;
+}
+
+#forum #posts section .karty section button:hover {
+  background: #283046;
+  color: white;
 }
 
 @-webkit-keyframes karty-wysuwanie {
