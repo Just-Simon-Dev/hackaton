@@ -26,7 +26,9 @@ export default function Registration() {
     const checkLog = () => {
         axios.post(database + '/rejestracja', { login: login, mail: mail, haslo: pass })
             .then(res => {
-                setNext(res.data)
+                
+                    setNext( true )
+                
             })
     }
 
@@ -46,7 +48,7 @@ export default function Registration() {
                 <Button onClick={checkLog}>Zarejestruj się</Button>
 
             </form>
-            <Link to="/logowanie"><Button>zaloguj się</Button></Link>
+            {/* <Link to="/logowanie"><Button>zaloguj się</Button></Link> */}
             {next ? <Redirect to="/logowanie"/> : null}
         </div>
     )
