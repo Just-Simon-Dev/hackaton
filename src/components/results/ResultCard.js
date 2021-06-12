@@ -15,7 +15,8 @@ export default function ResultCard() {
             })
     }, [])
     return (
-        <div className='res-card' >
+        <div>
+            {console.log(data)}
             <h1>{data.marka} {data.model}</h1>
             <ul>
                 <li>dopuszczalna masa calkowita: {data['dopuszczalna-masa-calkowita']}</li>
