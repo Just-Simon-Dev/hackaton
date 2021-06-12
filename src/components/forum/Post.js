@@ -12,15 +12,20 @@ import { database } from '../other/links'
 
 export default function Post({element, index}) {
 
-    const [newComm, setNewComm] = useState([])
+    const [newComm, setNewComm] = useState("")
 
     const id = Cookies.get('username')
 
     const sendComm = () => {    
-        axios.post(database +'/dodaj-komentarz', {user_id: id, post_id: element.id_posta, text: newComm})
+        if(newComm != ""){
+            axios.post(database +'/dodaj-komentarz', {user_id: id, post_id: element.id_posta, text: newComm})
             .then(res => {
                 console.log(res);
             })
+        }else{
+            alert('proszę uzupełnić komentarz')
+        }
+        
     }
 
     return (
@@ -39,6 +44,7 @@ export default function Post({element, index}) {
                     <div className='comments' >
                     {element.komentarze.map( (el, index)=> {
                         return el.text_kom != '' ? <Typography variant="body2" color="textSecondary" component="p">
+                            {el.autor_kom} napisał: <br/>
                             {el.text_kom}
                         </Typography> : null
                     })}
