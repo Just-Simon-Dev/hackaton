@@ -12,9 +12,9 @@ export default function Aktywacja() {
     }
 
     return (
-        <div>
-            Aktywuj swoje konto:
-            <Link to='/logowanie'><Button onClick={send}>Aktywuj</Button></Link>
+        <div id='aktywacja' >
+           <h2>  Aktywuj swoje konto:</h2>
+            <Link to='/logowanie'><Button onClick={send}>Aktywuj</Button></Link> 
         </div>
     )
 }

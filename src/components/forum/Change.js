@@ -24,10 +24,10 @@ export default function Change() {
     }
 
     return (
-        <div>
+        <div id='zmiana' >
             <form>
-                <TextField id="outlined-basic" label="stare hasło" variant="outlined" onChange={event => setStareHaslo(event.target.value)} value={stareHaslo} /><br />
-                <TextField id="outlined-basic" label="nowe hasło" variant="outlined" onChange={event => setNoweHaslo(event.target.value)} value={noweHaslo} /><br />
+                <TextField id="outlined-basic" label="stare hasło" variant="outlined" onChange={event => setStareHaslo(event.target.value)} value={stareHaslo} /><br /><br />
+                <TextField id="outlined-basic" label="nowe hasło" variant="outlined" onChange={event => setNoweHaslo(event.target.value)} value={noweHaslo} /><br /><br />
                 <Button onClick={toDB}>wyślij</Button>
                 {res === true ? <Redirect to="/forum"/> : null}
             </form>

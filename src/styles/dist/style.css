@@ -238,6 +238,47 @@ ul, li {
   color: white;
 }
 
+#aktywacja {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 20vh;
+}
+#aktywacja button {
+  background: #303952;
+  color: #596275;
+  width: 9rem;
+  height: 3rem;
+}
+#aktywacja button:hover {
+  background: #283046;
+  color: white;
+}
+
+#zmiana {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 30vh;
+  background: #434b61;
+  padding: 3rem;
+  border-radius: 10px;
+}
+#zmiana input {
+  width: 15rem;
+  background: #505970;
+}
+#zmiana button {
+  background: #303952;
+  color: #596275;
+  width: 17rem;
+  height: 3rem;
+}
+#zmiana button:hover {
+  background: #283046;
+  color: white;
+}
+
 @keyframes karty-wysuwanie {
   0% {
     opacity: 0;

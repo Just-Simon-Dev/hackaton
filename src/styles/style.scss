@@ -241,6 +241,45 @@ ul, li{
         }
     }
 }
+#aktywacja{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 20vh;
+    button{
+        background: #303952;
+        color: #596275;
+        &:hover{
+            background: #283046;
+            color: white;
+        }
+        width: 9rem;
+        height: 3rem;
+    }
+}
+#zmiana{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 30vh;
+    background: #434b61;
+    padding: 3rem;
+    border-radius: 10px;
+    input{
+        width: 15rem;
+        background: #505970;
+    }
+    button{
+        background: #303952;
+        color: #596275;
+        &:hover{
+            background: #283046;
+            color: white;
+        }
+        width: 17rem;
+        height: 3rem;
+    }
+}
 
 @keyframes karty-wysuwanie {
     0%{
