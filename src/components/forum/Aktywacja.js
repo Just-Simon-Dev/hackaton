@@ -13,7 +13,8 @@ export default function Aktywacja() {
 
     return (
         <div>
-            <Link to='/logowanie'><Button onClick={send}>Potwierdź</Button></Link>
+            Aktywuj swoje konto:
+            <Link to='/logowanie'><Button onClick={send}>Aktywuj</Button></Link>
         </div>
     )
 }
