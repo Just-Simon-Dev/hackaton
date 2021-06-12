@@ -10,3 +10,9 @@
     font-size: 26px;
     margin: 10px 100px 10px 100px;
 }
+
+.err{
+    color: #b33939;
+    font-size: 1em;
+    font-weight: bold;
+}
