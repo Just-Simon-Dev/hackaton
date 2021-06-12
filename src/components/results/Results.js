@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
 
+const Loading = lazy(() => import('../Loading'))
+
 export default function Results({answers}) {
 
     const [apiCars, setApiCars] = useState([]);
@@ -21,12 +23,14 @@ export default function Results({answers}) {
     const days = answers[2].split('-');
 
     useEffect(() => {
+        setLoader(true)
         for (let i = Number.parseInt(days[0]); i <= Number.parseInt(days[1]); i++)
             axios.get(`https://api.cepik.gov.pl/pojazdy?wojewodztwo=02&data-od=${year + month + day}&limit=5&filter[rodzaj-pojazdu]=${answers[0]}&filter[marka]=${answers[1]}&filter[rok-produkcji]=${i}&filter[rodzaj-paliwa]=${answers[3]}&filter[liczba-miejsc-ogolem]=${answers[4]}`)
                 .then(res => {
                     setApiCars(apiCars.concat(res.data.data));
                 })
                 .catch((err) => console.log(err))
+        setLoader(false)
         return () => {
             setApiCars([])
         }
@@ -34,6 +38,7 @@ export default function Results({answers}) {
 
     return (
         <div className="result-container">
+            
             {
                 apiCars.map((element, index) => {
                     return <Card key={index} className='result-card'>
@@ -52,7 +57,7 @@ export default function Results({answers}) {
                     </Card>
                 })
             }
-            {apiCars.length == 0 ? "Przepraszamy, nie mogliśmy znaleźć wyników, dla podanych parametrów" : null}
+            {apiCars.length == 0 ? <Loading /> : null}
         </div>
     )
 }
