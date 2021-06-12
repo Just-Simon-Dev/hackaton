@@ -38,7 +38,7 @@ export default function Controller() {
             <TextField id="outlined-basic" label="postuj" variant="standard" onChange={event => setPost(event.target.value)} value={post} /><br />
             <Button onClick={toDB}>wyślij</Button>
             <Link to="/zmiana"><Button id='pass' >zmień hasło</Button></Link>
-            <Link to="/logowanie" onClick={()=>Cookies.remove('username')}><Button id='pass' >Wyloguj się</Button></Link>
+            <Link to="/logowanie" onClick={()=>Cookies.remove('username')}><Button id='wyloguj' >Wyloguj się</Button></Link>
             </div>
         </div>
     )

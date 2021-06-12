@@ -212,7 +212,7 @@ ul, li {
   background: #3d455a;
 }
 
-#forum #control div #pass {
+#forum #control div #pass, #forum #control div #wyloguj {
   position: absolute;
   bottom: 3rem;
   background: #303952;
@@ -222,8 +222,12 @@ ul, li {
   left: 1.5rem;
 }
 
-#forum #control div #pass:hover {
+#forum #control div #pass:hover, #forum #control div #wyloguj:hover {
   background: #202736;
+}
+
+#forum #control div #wyloguj {
+  bottom: 7rem;
 }
 
 #forum #posts {
@@ -260,7 +264,7 @@ ul, li {
   line-height: 200%;
 }
 
-#forum #posts section .karty .comments p:nth-child(2) {
+#forum #posts section .karty .comments p:nth-child(2n) {
   background: #3d455a;
 }
 
@@ -334,6 +338,13 @@ ul, li {
 #zmiana button:hover {
   background: #283046;
   color: white;
+}
+
+.forum-login button {
+  width: 100%;
+  background: #434b61;
+  height: 3rem;
+  border-radius: 0px;
 }
 
 @-webkit-keyframes karty-wysuwanie {

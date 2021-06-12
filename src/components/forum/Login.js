@@ -30,9 +30,10 @@ export default function Login() {
     const checkLog = () => {
         axios.post(database+'/login', {login: login, haslo: pass})
             .then(res => {
-                setNext(res.data)
+                
                 if(res.data != 'not activated' && res.data != false){
                     Cookies.set("username", res.data);
+                    setNext(true)
                 }
                 if (res.data == 'not activated'){
                     setError("konto nie zostało aktywowane")
@@ -58,9 +59,10 @@ export default function Login() {
                 <TextField className={classes.inputs} id="outlined-basic" label="Login" variant="outlined" onChange={event => setLogin(event.target.value)} value={login}/><br/>
                 <TextField className={classes.inputs} id="outlined-basic" label="Hasło" variant="outlined" type="password" onChange={event => setPass(event.target.value)} value={pass}/><br/>
                 <Button onClick={checkLog}>Zaloguj się</Button>
+                <Link to="/rejestracja"><Button>Zarejestruj się</Button></Link>
                 <div>{error}</div>
             </form>
-            <Link to="/rejestracja"><Button>Zarejestruj się</Button></Link>
+           
             {next != 'not activated' && next != false ? <Redirect to="/forum" /> : null}
         </div>
     )

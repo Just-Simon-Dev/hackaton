@@ -168,7 +168,7 @@ ul, li{
                 background: #3d455a;
             }
         }
-        #pass{
+        #pass, #wyloguj{
             position: absolute;
             bottom: 3rem;
             background: #303952;
@@ -179,6 +179,9 @@ ul, li{
             &:hover{
                 background: rgb(32, 39, 54);
             }
+        }
+        #wyloguj{
+            bottom: 7rem;
         }
     }
     }
@@ -210,7 +213,7 @@ ul, li{
                         width: calc(50vw - 6rem);
                         font-size: 1rem;
                         line-height: 200%;
-                        &:nth-child(2){
+                        &:nth-child(2n){
                             background: #3d455a;
                         }
                     }
@@ -280,7 +283,14 @@ ul, li{
         height: 3rem;
     }
 }
-
+.forum-login{
+    button{
+        width: 100%;
+        background: #434b61;
+        height: 3rem;
+        border-radius: 0px;
+    }
+}
 @keyframes karty-wysuwanie {
     0%{
         opacity: 0;
