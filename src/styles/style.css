@@ -140,6 +140,42 @@ ul, li {
   transition: 0.5s;
   color: white;
 }
+.result-container {
+  text-align: center;
+}
+
+.result-container .result-card {
+  margin: 2rem;
+  background: #303952;
+  color: white;
+  height: 8rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.result-container .result-card button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.result-container .result-card h2 {
+  margin-top: 1rem;
+}
+
+.res-card {
+  background: #505970;
+  margin: 5rem;
+  text-align: center;
+}
+
+.res-card p {
+  line-height: 300%;
+}
+
 
 #mainer #slider .slide .text-rog button:hover {
   background: #101625;
