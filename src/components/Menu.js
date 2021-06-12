@@ -63,12 +63,7 @@ export default function Menu() {
             <div >
                 <div className='right' >
                     <li> <Link to='/formularz' >Formularz </Link></li>
-                    <li>Forum
-                    <ul >
-                                <li><Link to='/forum/glowna' > Strona Główna </Link></li>
-                                <li><Link to='/forum/profil' > Mój profil </Link></li>
-                            </ul>
-                    </li>
+                    <li> <Link to='/forum' >Forum </Link> </li>
                     <li><Link to='/bezpieczenstwo' > Bezpieczeństwo </Link></li>
                     <li><Link to='/srodowisko' > Środowisko </Link></li>
                 </div>
@@ -85,10 +80,6 @@ export default function Menu() {
                         <div className='sect' >
                         <li> <Link to='/formularz' >Formularz </Link></li>
                             <li><Link to='/forum' > Forum </Link></li>
-                            <ul >
-                                <li><Link to='/forum' > Strona Główna </Link></li>
-                                <li><Link to='/forum' > Mój profil </Link></li>
-                            </ul>
                             <li><Link to='/bezpieczenstwo' > Bezpieczeństwo </Link></li>
                             <li><Link to='/srodowisko' > Środowisko </Link></li>
                         </div>

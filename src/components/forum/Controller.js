@@ -25,7 +25,7 @@ export default function Controller() {
     })
 
     return (
-        <div>
+        <div id='control' >
             nazwa użytkownika: {name}<br/>
             <TextField id="outlined-basic" label="postuj" variant="standard" onChange={event => setPost(event.target.value)} value={post} /><br />
             <Button onClick={toDB}>wyślij</Button>
