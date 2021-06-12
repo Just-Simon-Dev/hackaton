@@ -29,7 +29,7 @@ export default function Change() {
                 <TextField id="outlined-basic" label="stare hasło" variant="outlined" onChange={event => setStareHaslo(event.target.value)} value={stareHaslo} /><br />
                 <TextField id="outlined-basic" label="nowe hasło" variant="outlined" onChange={event => setNoweHaslo(event.target.value)} value={noweHaslo} /><br />
                 <Button onClick={toDB}>wyślij</Button>
-                {res === true ? <Redirect to="/forum/glowna"/> : null}
+                {res === true ? <Redirect to="/forum"/> : null}
             </form>
             {res === false ? "podane stare hasło jest nieprawidłowe" : ""}
         </div>

@@ -58,7 +58,7 @@ export default function Login() {
                 <div>{error}</div>
             </form>
             <Link to="/rejestracja"><Button>Zarejestruj się</Button></Link>
-            {next != 'not activated' && next != false ? <Redirect to="/forum/glowna" /> : null}
+            {next != 'not activated' && next != false ? <Redirect to="/forum" /> : null}
         </div>
     )
 }

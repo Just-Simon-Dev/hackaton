@@ -31,7 +31,7 @@ function App() {
           <Route path='/bezpieczenstwo' children={ <Safety/> } />
           <Route path='/forum' children={ <Forum/> } />
           <Route path='/carCard' children={<ResultCard />} />
-          <Route path='/forum/glowna' children={<MainForum />} />
+          <Route path='/forum' children={<MainForum />} />
           <Route path='/logowanie' children={<Login />} />
           <Route path='/rejestracja' children={<Registration />} />
           <Route path='/aktywacja' children={<Aktywacja />} />
