@@ -14,7 +14,10 @@ export default function Controller() {
     const id = Cookies.get('username')
 
     const toDB = () => {
-        axios.post(database +"/dodaj-posta", {user_id: id, text: post});
+        axios.post(database +"/dodaj-posta", {user_id: id, text: post})
+            .then(res => {
+                window.location.reload()
+            });
     }
 
     useEffect(() => {

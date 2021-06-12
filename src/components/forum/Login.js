@@ -34,8 +34,12 @@ export default function Login() {
                 setNext(res.data)
                 if(res.data != 'not activated' && res.data != false){
                     Cookies.set("username", res.data);
-                }else{
-                    setError('konto nie zostało aktywowane')
+                }
+                if (res.data == 'not activated'){
+                    setError("konto nie zostało aktywowane")
+                }
+                if(res.data == false){
+                    setError("zły login lub hasło")
                 }
             })
     }
