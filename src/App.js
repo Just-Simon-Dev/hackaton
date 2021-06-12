@@ -13,6 +13,7 @@ const MainForum = lazy(() => import('./components/forum/Main'))
 const Login = lazy(() => import('./components/forum/Login'))
 const Registration = lazy(() => import('./components/forum/Registration'))
 const Aktywacja = lazy(() => import('./components/forum/Aktywacja'))
+const Change = lazy(() => import('./components/forum/Change'));
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/logowanie' children={<Login />} />
           <Route path='/rejestracja' children={<Registration />} />
           <Route path='/aktywacja' children={<Aktywacja />} />
+          <Route path='/zmiana' children={<Change />} />
         </Switch>
       </div>
     </Suspense>

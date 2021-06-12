@@ -6,9 +6,9 @@ import { Button } from '@material-ui/core'
 import { database } from '../other/links'
 import '../../styles/forum-login.css'
 import axios from 'axios'
+import Cookies from 'js-cookie'
 
 const Main = lazy(() => import('./Main'))
-const Account = lazy(() => import('./Account'))
 
 const useStyles = makeStyles((theme) => ({
     inputs: {
@@ -30,10 +30,10 @@ export default function Login() {
     const checkLog = () => {
         axios.post(database+'/login', {login: login, haslo: pass})
             .then(res => {
+                console.log(res.data)
                 setNext(res.data)
                 if(res.data != 'not activated' && res.data != false){
-                    document.cookie = "username=" + res.data
-                    
+                    Cookies.set("username", res.data);
                 }else{
                     setError('konto nie zostało aktywowane')
                 }
@@ -44,6 +44,8 @@ export default function Login() {
         return () => {
             setLogin('')
             setPass('')
+            setError('')
+            setNext('')
         }
     }, [])
     return (
@@ -56,7 +58,7 @@ export default function Login() {
                 <div>{error}</div>
             </form>
             <Link to="/rejestracja"><Button>Zarejestruj się</Button></Link>
-            {next != false && next != false ? <Redirect to="/forum/glowny" /> : null}
+            {next != 'not activated' && next != false ? <Redirect to="/forum/glowna" /> : null}
         </div>
     )
 }
