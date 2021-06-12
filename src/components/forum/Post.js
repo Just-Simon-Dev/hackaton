@@ -20,7 +20,7 @@ export default function Post({element, index}) {
         if(newComm != ""){
             axios.post(database +'/dodaj-komentarz', {user_id: id, post_id: element.id_posta, text: newComm})
             .then(res => {
-                console.log(res);
+                window.location.reload()
             })
         }else{
             alert('proszę uzupełnić komentarz')
@@ -44,7 +44,7 @@ export default function Post({element, index}) {
                     <div className='comments' >
                     {element.komentarze.map( (el, index)=> {
                         return el.text_kom != '' ? <Typography variant="body2" color="textSecondary" component="p">
-                            {el.autor_kom} napisał:  {el.text_kom}
+                            {el.autor_kom} napisał(a):  {el.text_kom}
                         </Typography> : null
                     })}
                     </div><br></br>

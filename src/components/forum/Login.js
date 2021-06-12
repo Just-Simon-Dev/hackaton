@@ -30,7 +30,6 @@ export default function Login() {
     const checkLog = () => {
         axios.post(database+'/login', {login: login, haslo: pass})
             .then(res => {
-                console.log(res.data)
                 setNext(res.data)
                 if(res.data != 'not activated' && res.data != false){
                     Cookies.set("username", res.data);
