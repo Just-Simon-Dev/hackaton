@@ -24,12 +24,14 @@ export default function Registration() {
     const [next, setNext] = useState(false)
 
     const checkLog = () => {
-        axios.post(database + '/rejestracja', { login: login, mail: mail, haslo: pass })
-            .then(res => {
-                
-                    setNext( true )
-                
-            })
+        if(login != '' && mail != '' && pass != ''){
+            axios.post(database + '/rejestracja', { login: login, mail: mail, haslo: pass })
+                .then(res => {
+                    setNext(res.data)
+                })
+        }else{
+            alert('musisz wypełnić formularz')
+        }
     }
 
     useEffect(() => {
@@ -46,9 +48,10 @@ export default function Registration() {
                 <TextField className={classes.inputs} id="outlined-basic" label="e-mail" variant="outlined" type="e-mail" onChange={event => setMail(event.target.value)} value={mail} /><br />
                 <TextField className={classes.inputs} id="outlined-basic" label="Hasło" variant="outlined" type="password" onChange={event => setPass(event.target.value)} value={pass} /><br />
                 <Button onClick={checkLog}>Zarejestruj się</Button>
+                <Link to="/logowanie"><Button>zaloguj się</Button></Link>
 
             </form>
-            {/* <Link to="/logowanie"><Button>zaloguj się</Button></Link> */}
+            
             {next ? <Redirect to="/logowanie"/> : null}
         </div>
     )

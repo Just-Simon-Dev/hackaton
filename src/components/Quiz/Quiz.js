@@ -40,7 +40,6 @@ export default function Quiz() {
             :
             <Results answers={ answers } />
         }
-        {console.log( answers )}
         </div>
     )
 }
