@@ -11,7 +11,7 @@ export default function Main() {
     useEffect(() => {
         axios.get(database+"/posty")
             .then(res => {
-                setPosts(res.data)
+                setPosts(res.data.reverse())
             })
         
     }, [])
