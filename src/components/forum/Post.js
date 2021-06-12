@@ -44,8 +44,7 @@ export default function Post({element, index}) {
                     <div className='comments' >
                     {element.komentarze.map( (el, index)=> {
                         return el.text_kom != '' ? <Typography variant="body2" color="textSecondary" component="p">
-                            {el.autor_kom} napisał: <br/>
-                            {el.text_kom}
+                            {el.autor_kom} napisał:  {el.text_kom}
                         </Typography> : null
                     })}
                     </div><br></br>
